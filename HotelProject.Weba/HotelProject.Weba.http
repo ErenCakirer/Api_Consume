@@ -1,0 +1,6 @@
+@HotelProject.Weba_HostAddress = http://localhost:5027
+
+GET {{HotelProject.Weba_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

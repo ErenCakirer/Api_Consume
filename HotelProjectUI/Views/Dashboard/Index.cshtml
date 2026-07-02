@@ -1,0 +1,98 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("DashboardHeadP")
+
+<body>
+
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <div id="main-wrapper">
+
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <b class="logo-abbr"><img src="~/adminweb/images/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="~/adminweb/images/logo-compact.png" alt=""></span>
+                    <span class="brand-title">
+                        <img src="~/adminweb/images/logo-text.png" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-content clearfix">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Dashboard</li>
+                    <li>
+                        <a href="/Dashboard/Index" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Staff/Index" aria-expanded="false">
+                            <i class="icon-user menu-icon"></i><span class="nav-text">Personeller</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-body">
+            <div class="container-fluid mt-3">
+
+                @await Component.InvokeAsync("DashboardWidget")
+
+                @await Component.InvokeAsync("DashboardLastStaff")
+
+                @await Component.InvokeAsync("DashboardLastBookings")
+
+          
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div>
+    </div>
+    <script src="~/adminweb/plugins/common/common.min.js"></script>
+    <script src="~/adminweb/js/custom.min.js"></script>
+    <script src="~/adminweb/js/settings.js"></script>
+    <script src="~/adminweb/js/gleek.js"></script>
+    <script src="~/adminweb/js/styleSwitcher.js"></script>
+
+    <script src="~/adminweb/plugins/chart.js/Chart.bundle.min.js"></script>
+    <script src="~/adminweb/plugins/circle-progress/circle-progress.min.js"></script>
+    <script src="~/adminweb/plugins/d3v3/index.js"></script>
+    <script src="~/adminweb/plugins/topojson/topojson.min.js"></script>
+    <script src="~/adminweb/plugins/datamaps/datamaps.world.min.js"></script>
+    <script src="~/adminweb/plugins/raphael/raphael.min.js"></script>
+    <script src="~/adminweb/plugins/morris/morris.min.js"></script>
+    <script src="~/adminweb/plugins/moment/moment.min.js"></script>
+    <script src="~/adminweb/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <script src="~/adminweb/plugins/chartist/js/chartist.min.js"></script>
+    <script src="~/adminweb/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="~/adminweb/js/dashboard/dashboard-1.js"></script>
+
+</body>
+</html>
